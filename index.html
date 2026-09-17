@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Форум ванильного Minecraft-сервера PROXIMA." />
+    <title>PROXIMA — форум сервера</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <main class="forum-shell">
+      <aside class="sidebar" aria-label="Разделы форума">
+        <a class="brand" href="#home" data-page="home" aria-label="PROXIMA, на главную">
+          <span class="brand-mark"><img src="proxima-avatar.png" alt="Аватар PROXIMA" /></span>
+          <span>PROXIMA<small>VANILLA+ SERVER</small></span>
+        </a>
+
+        <nav class="nav-list">
+          <button class="nav-item active" data-page="home"><span class="icon">⌂</span>Главная</button>
+          <button class="nav-item" data-page="plugins"><span class="icon">✦</span>Кастомные плагины</button>
+          <button class="nav-item" data-page="mods"><span class="icon">▣</span>Моды</button>
+          <button class="nav-item" data-page="rules"><span class="icon">⚑</span>Правила</button>
+          <button class="nav-item" data-page="ranks"><span class="icon">♛</span>Привилегии</button>
+          <button class="nav-item" data-page="meteors"><span class="icon">☄</span>Метеоры</button>
+          <button class="nav-item cart-nav" data-page="cart"><span class="icon">🛒</span>Корзина <b class="cart-count" id="cartCount">0</b></button>
+          <button class="nav-item" data-page="guides"><span class="icon">▤</span>Гайды</button>
+          <button class="nav-item" data-page="play"><span class="icon">▶</span>Как играть?</button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="online"><span id="onlineDot"></span><b id="onlineCount">—</b> игроков онлайн</div>
+          <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+            <span class="sun">☼</span><span class="toggle-knob"></span><span>☾</span>
+          </button>
+        </div>
+      </aside>
+
+      <section class="content" id="content" tabindex="-1"></section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
